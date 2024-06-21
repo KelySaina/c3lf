@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import WelcomePage from "./pages/WelcomePage"
 import NavbarComponent from "./components/NavbarComponent"
 import HomePage from "./pages/HomePage"
@@ -10,9 +10,10 @@ import FooterComponent from "./components/FooterComponent"
 function App() {
 
   return (
-    <>
-      <NavbarComponent />
-      <BrowserRouter>
+    <Router>
+      <>
+        <NavbarComponent />
+
         <Routes>
           <Route path="/" element={<WelcomePage />} />
           <Route path="/home" element={<HomePage />} />
@@ -20,9 +21,10 @@ function App() {
           <Route path="/team" element={<TeamPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
-      </BrowserRouter>
-      <FooterComponent />
-    </>
+
+        <FooterComponent />
+      </>
+    </Router>
   )
 }
 

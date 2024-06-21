@@ -2,7 +2,7 @@ import NotFound from "../components/NotFound"
 
 const ContactPage = () => {
     return (
-        <NotFound />
+        <NotFound pageName="Contact" />
     )
 }
 
