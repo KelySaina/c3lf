@@ -7,16 +7,16 @@ const NotFound = ({ pageName }) => {
                 <h2 className="text-2xl font-semibold text-gray-800 mb-2">Page <b>{pageName}</b> Not Found</h2>
                 <p className="text-gray-600 mb-4">This page is currently under developpement</p>
                 <p className="text-gray-600 mb-4">We invite your contribution to the development of this page. Interested?</p>
-                <div className="grid grid-cols-2 gap-4 flex items-center">
-                    <a href="/home" className="font-medium text-blue-700 hover:underline">
-                        Back to Home
-                    </a>
+                <div className="flex flex-col space-y-2 mt-4 md:mt-6">
                     <a
                         href="https://github.com/KelySaina/c3lf/blob/main/README.md"
                         target="_blank"
                         className="inline-block px-6 py-2 text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 rounded-lg"
                     >
                         I want to CONTRIBUTE
+                    </a>
+                    <a href="/home" className="flex justify-center px-6 py-2 bg-gray-200 font-medium text-blue-700 hover:bg-gray-300 rounded-lg">
+                        Back to Home
                     </a>
                 </div>
 
