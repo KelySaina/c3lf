@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // eslint-disable-next-line react/prop-types
 const NotFound = ({ pageName }) => {
     return (
@@ -15,9 +17,9 @@ const NotFound = ({ pageName }) => {
                     >
                         I want to CONTRIBUTE
                     </a>
-                    <a href="/home" className="flex justify-center px-6 py-2 bg-gray-200 font-medium text-blue-700 hover:bg-gray-300 rounded-lg">
+                    <Link to={"/home"} className="flex justify-center px-6 py-2 bg-gray-200 font-medium text-blue-700 hover:bg-gray-300 rounded-lg">
                         Back to Home
-                    </a>
+                    </Link>
                 </div>
 
             </div>
