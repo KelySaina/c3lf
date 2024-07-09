@@ -30,7 +30,7 @@ const WelcomePage = () => {
                         >
                             I want to CONTRIBUTE
                         </a>
-                        <Link href={"/home"} className="flex justify-center px-6 py-2 bg-gray-200 font-medium text-blue-700 hover:bg-gray-300 rounded-lg">
+                        <Link to="/home" className="flex justify-center px-6 py-2 bg-gray-200 font-medium text-blue-700 hover:bg-gray-300 rounded-lg">
                             Take a tour
                         </Link>
                     </div>
