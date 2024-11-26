@@ -5,8 +5,8 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ActivityPage from "./pages/ActivityPage";
 import TeamPage from "./pages/TeamPage";
-import ContactPage from "./pages/ContactPage";
 import FooterComponent from "./components/FooterComponent";
+import NotFoundPage from "./pages/NotFoundPage"; // Import NotFoundPage
 
 function App() {
   return (
@@ -20,7 +20,9 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/activity" element={<ActivityPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+
+          {/* Catch-all route for unknown paths */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
 
         <FooterComponent />

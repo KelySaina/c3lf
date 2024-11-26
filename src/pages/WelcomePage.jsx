@@ -44,7 +44,9 @@ const WelcomePage = () => {
 
         {/* Text and Buttons Section */}
         <div className="md:w-1/2 mt-4 md:mt-0">
-          <h2 className="text-2xl md:text-3xl text-left">Welcome!!!</h2>
+          <h2 className="text-2xl font-bold md:text-3xl text-left">
+            Welcome!!!
+          </h2>
           <div className="text-justify">
             <p>
               This site is the result of a collaboration between several

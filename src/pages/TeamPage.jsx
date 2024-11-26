@@ -1,22 +1,22 @@
 const TeamPage = () => {
   const teamMembers = [
     {
-      name: "Nely Zaratiana Fify",
+      name: "John Doe",
       role: "President",
       description:
         "John is the visionary behind the project, working to bring open-source education to all.",
-      photo: "/images/imagesMembers/john-doe.jpg",
+      photo: "/images/imagesMembers/dummy.avif",
       socialLinks: [
         { icon: "linkedin", url: "https://www.linkedin.com/in/johndoe" },
         { icon: "github", url: "https://github.com/johndoe" },
       ],
     },
     {
-      name: "Stephan Aina Raf",
+      name: "Jane Doe",
       role: "System Administrator, Vice President",
       description:
         "Jane leads the development team, ensuring smooth coding processes and innovative solutions.",
-      photo: "/images/jane-smith.jpg",
+      photo: "/images/imagesMembers/dummy.avif",
       socialLinks: [
         { icon: "linkedin", url: "https://www.linkedin.com/in/janesmith" },
         { icon: "github", url: "https://github.com/janesmith" },
@@ -27,7 +27,7 @@ const TeamPage = () => {
       role: "Founder, CEO",
       description:
         "John is the visionary behind the project, working to bring open-source education to all.",
-      photo: "/images/imagesMembers/john-doe.jpg",
+      photo: "/images/imagesMembers/dummy.avif",
       socialLinks: [
         { icon: "linkedin", url: "https://www.linkedin.com/in/johndoe" },
         { icon: "github", url: "https://github.com/johndoe" },
@@ -60,23 +60,28 @@ const TeamPage = () => {
                 alt={member.name}
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
-              <div className="flex justify-end gap-4">
-                {member.socialLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-indigo-600"
-                  >
-                    <i className={`fab fa-${link.icon} text-xl`}></i>
-                  </a>
-                ))}
+              <div className="flex justify-between gap-4">
+                <div className="text-justify gap-2 mb-4">
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm text-gray-600">{member.role}</p>
+                </div>
+                <div className="flex gap-2">
+                  {member.socialLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-indigo-600"
+                    >
+                      <i className={`fab fa-${link.icon} text-xl`}></i>
+                    </a>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">
-                {member.name}
-              </h3>
-              <p className="text-sm text-gray-600 mb-4">{member.role}</p>
+
               <p className="text-gray-700 mb-4">{member.description}</p>
             </div>
           ))}
