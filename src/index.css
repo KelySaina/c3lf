@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Bold';
-    src: url('./assets/fonts/Bold.ttf') format('truetype');
-    font-weight: lighter;
-    font-style: normal;
-  }
+  font-family: "Nunito";
+  src: url("./assets/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
 
-  body{
-    font-family: 'Bold';
-  }
+body {
+  font-family: "Nunito";
+}
