@@ -30,7 +30,7 @@ const WelcomePage = () => {
   return (
     <div className="space-y-5 py-4 px-[8%] relative">
       {/* Quote Section */}
-      <div className="flex justify-center mt-6">
+      <div className="flex justify-center mt-2">
         <p className="text-center italic relative w-full md:w-[max-content] before:absolute before:inset-0 before:bg-white before:animate-typewriter">
           “Promouvoir l&apos;utilisation des logiciels libres dans le monde
           Universitaire et Professionnel.”
@@ -43,7 +43,7 @@ const WelcomePage = () => {
         </div>
 
         {/* Text and Buttons Section */}
-        <div className="md:w-1/2 mt-6 md:mt-0">
+        <div className="md:w-1/2 mt-4 md:mt-0">
           <h2 className="text-2xl md:text-3xl text-left">Welcome!!!</h2>
           <div className="text-justify">
             <p>

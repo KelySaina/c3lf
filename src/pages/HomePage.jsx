@@ -1,9 +1,15 @@
-import NotFound from "../components/NotFound"
+import HomeHeroSectionComponent from "../components/home/HeroSectionComponent";
+import HomeUsSectionComponent from "../components/home/UsSectionComponent";
+import HomeActivitiesSectionComponent from "../components/home/ActivitiesSectionComponent";
 
 const HomePage = () => {
-    return (
-        <NotFound pageName="Home" />
-    )
-}
+  return (
+    <div className="bg-gray-50 text-gray-800">
+      <HomeHeroSectionComponent />
+      <HomeUsSectionComponent />
+      <HomeActivitiesSectionComponent />
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;
