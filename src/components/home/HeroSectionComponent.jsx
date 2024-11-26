@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HomeHeroSectionComponent = () => {
   return (
     <div>
@@ -9,21 +11,24 @@ const HomeHeroSectionComponent = () => {
             <h2 className="text-4xl font-bold text-blue-600 leading-tight">
               Promoting Open-Source Software in Universities and Beyond
             </h2>
-            <p className="mt-4 text-lg text-gray-700">
+            <p className="my-4 text-lg text-gray-700">
               At C3LF, we empower students and professionals with the tools,
               knowledge, and community to embrace open-source software, Linux
               systems, and robotics.
             </p>
-            <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700">
+            <Link
+              to="/about"
+              className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700"
+            >
               Learn More
-            </button>
+            </Link>
           </div>
           {/* Image */}
           <div className="lg:w-1/2 flex justify-center">
             <img
               src="/images/technology.avif"
               alt="Technology"
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg hidden lg:block"
             />
           </div>
         </div>

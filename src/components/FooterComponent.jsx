@@ -89,7 +89,7 @@ const FooterComponent = () => {
                 <span className="ml-2">Team</span>
               </Link>
               <Link to="/activity" className="text-white hover:text-gray-400">
-                <i className="fas fa-brief-case text-xl"></i>
+                <i className="fas fa-briefcase text-xl"></i>
                 <span className="ml-2">Activities</span>
               </Link>
             </div>
