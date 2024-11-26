@@ -17,7 +17,7 @@ const HomeUsSectionComponent = () => {
           </p>
 
           {/* Icons and Description */}
-          <div className="flex justify-center gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {/* Icon 1: Collaboration */}
             <div className="flex flex-col items-center">
               <i className="text-4xl text-blue-700 fas fa-users"></i>
@@ -62,7 +62,7 @@ const HomeUsSectionComponent = () => {
           <div className="text-center mt-10">
             <Link
               to="/team"
-              className="px-8 py-4 text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 rounded-lg transition-all duration-300 transform hover:scale-105"
+              className="px-12 py-4 text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Meet the Team
             </Link>
