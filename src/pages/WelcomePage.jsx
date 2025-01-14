@@ -32,8 +32,7 @@ const WelcomePage = () => {
       {/* Quote Section */}
       <div className="flex justify-center mt-2">
         <p className="text-center italic relative w-full md:w-[max-content] before:absolute before:inset-0 before:bg-white before:animate-typewriter">
-          “Promouvoir l&apos;utilisation des logiciels libres dans le monde
-          Universitaire et Professionnel.”
+          "Promote the use of free software in the academic and professional world."”
         </p>
       </div>
       <div className="md:flex md:items-center md:space-x-6">
