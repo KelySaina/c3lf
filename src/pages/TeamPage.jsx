@@ -1,36 +1,17 @@
 const TeamPage = () => {
   const teamMembers = [
     {
-      name: "John Doe",
-      role: "President",
+      name: "Kely Saina",
+      role: "Designer - WebMaster -Mentor",
       description:
-        "John is the visionary behind the project, working to bring open-source education to all.",
-      photo: "/images/imagesMembers/dummy.avif",
+        "Kely Saina has been a dedicated mentor since 2021, sharing his expertise in Open-Source technologies and inspiring students to explore Linux and its benefits. Passionate about problem-solving and innovation, he not only creates solutions but also fosters a welcoming and approachable mentoring style, making complex topics accessible to all.",
+      photo: "/images/imagesMembers/KelySaina.jpg",
       socialLinks: [
-        { icon: "linkedin", url: "https://www.linkedin.com/in/johndoe" },
-        { icon: "github", url: "https://github.com/johndoe" },
-      ],
-    },
-    {
-      name: "Jane Doe",
-      role: "System Administrator, Vice President",
-      description:
-        "Jane leads the development team, ensuring smooth coding processes and innovative solutions.",
-      photo: "/images/imagesMembers/dummy.avif",
-      socialLinks: [
-        { icon: "linkedin", url: "https://www.linkedin.com/in/janesmith" },
-        { icon: "github", url: "https://github.com/janesmith" },
-      ],
-    },
-    {
-      name: "John Doe",
-      role: "Founder, CEO",
-      description:
-        "John is the visionary behind the project, working to bring open-source education to all.",
-      photo: "/images/imagesMembers/dummy.avif",
-      socialLinks: [
-        { icon: "linkedin", url: "https://www.linkedin.com/in/johndoe" },
-        { icon: "github", url: "https://github.com/johndoe" },
+        {
+          icon: "linkedin",
+          url: "https://www.linkedin.com/in/thierry-michael-7b8a71251/",
+        },
+        { icon: "github", url: "https://github.com/KelySaina" },
       ],
     },
   ];
