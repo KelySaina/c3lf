@@ -2,7 +2,7 @@ const TeamPage = () => {
   const teamMembers = [
     {
       name: "Kely Saina",
-      role: "Designer - WebMaster -Mentor",
+      role: "Designer - WebMaster - Mentor",
       description:
         "Kely Saina has been a dedicated mentor since 2021, sharing his expertise in Open-Source technologies and inspiring students to explore Linux and its benefits. Passionate about problem-solving and innovation, he not only creates solutions but also fosters a welcoming and approachable mentoring style, making complex topics accessible to all.",
       photo: "/images/imagesMembers/KelySaina.jpg",
