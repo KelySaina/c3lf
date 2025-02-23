@@ -33,13 +33,13 @@ Ensure you have the following installed on your local machine:
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your-username/c3lf-club-website.git
+   git clone https://github.com/KelySaina/c3lf.git
    ```
 
 2. Navigate to the project directory:
 
    ```sh
-   cd c3lf-club-website
+   cd c3lf
    ```
 
 3. Install the dependencies:
@@ -77,9 +77,9 @@ We welcome contributions from everyone. Whether you’re a seasoned developer or
 ### How to Contribute
 
 1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/YourFeature`).
+2. Create your Feature Branch (`git checkout -b YourName/feature/YourFeature`).
 3. Commit your Changes (`git commit -m 'Add some YourFeature'`).
-4. Push to the Branch (`git push origin feature/YourFeature`).
+4. Push to the Branch (`git push origin YourName/feature/YourFeature`).
 5. Open a Pull Request.
 
 ## Contact
