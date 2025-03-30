@@ -14,7 +14,6 @@ const FooterComponent = () => {
           throw new Error("Failed to fetch contributors");
         }
         const data = await response.json();
-        // Fetch additional data for each contributor
         const contributorsWithDetails = await Promise.all(
           data.map(async (contributor) => {
             const userResponse = await fetch(
@@ -43,20 +42,21 @@ const FooterComponent = () => {
   }, []);
 
   return (
-    <footer className="bg-gray-800 text-white py-6">
-      <div className="container mx-auto px-4">
-        {/* Contributors Section - Hidden on Small Screens */}
-        <div className="hidden sm:flex flex-col justify-center items-center mb-6">
-          <h3 className="text-sm">
+    <footer className="bg-gray-900 text-white py-10">
+      <div className="container mx-auto px-6">
+        {/* Contributors Section */}
+        <div className="flex flex-col items-center mb-10">
+          <h3 className="text-lg font-semibold mb-4">
             {contributors.length === 0
-              ? ""
-              : contributors.length > 1
-              ? `${contributors.length} Contributors`
-              : `${contributors.length} Contributor`}
+              ? "Loading Contributors..."
+              : `${contributors.length} Contributor${contributors.length > 1 ? "s" : ""}`}
           </h3>
-          <ul className="flex flex-wrap items-center justify-center ml-4">
+          <ul className="flex flex-wrap justify-center gap-4">
             {contributors.map((contributor) => (
-              <li key={contributor.id} className="mx-2 my-2">
+              <li
+                key={contributor.id}
+                className="transform hover:scale-110 transition duration-300"
+              >
                 <a
                   href={contributor.html_url}
                   target="_blank"
@@ -65,7 +65,7 @@ const FooterComponent = () => {
                   <img
                     src={contributor.avatar_url}
                     alt={`Avatar of ${contributor.login}`}
-                    className="w-8 h-8 sm:w-12 sm:h-12 rounded-full"
+                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-lg"
                   />
                 </a>
               </li>
@@ -73,62 +73,73 @@ const FooterComponent = () => {
           </ul>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Quick Links Section */}
-          <div className="mb-6">
-            <h4 className="text-lg font-semibold mb-2 underline">
-              Quick Links
-            </h4>
-            <div className="flex justify-start space-x-6">
-              <Link to="/about" className="text-white hover:text-gray-400">
-                <i className="fas fa-info-circle text-xl"></i>
-                <span className="ml-2">About Us</span>
+          <div>
+            <h4 className="text-xl font-semibold mb-4 underline">Quick Links</h4>
+            <div className="flex flex-col space-y-4">
+              <Link
+                to="/about"
+                className="flex items-center text-white hover:text-gray-400 transition duration-300"
+              >
+                <i className="fas fa-info-circle text-2xl mr-2"></i>
+                About Us
               </Link>
-              <Link to="/team" className="text-white hover:text-gray-400">
-                <i className="fas fa-users text-xl"></i>
-                <span className="ml-2">Team</span>
+              <Link
+                to="/team"
+                className="flex items-center text-white hover:text-gray-400 transition duration-300"
+              >
+                <i className="fas fa-users text-2xl mr-2"></i>
+                Team
               </Link>
-              <Link to="/activity" className="text-white hover:text-gray-400">
-                <i className="fas fa-briefcase text-xl"></i>
-                <span className="ml-2">Activities</span>
+              <Link
+                to="/activity"
+                className="flex items-center text-white hover:text-gray-400 transition duration-300"
+              >
+                <i className="fas fa-briefcase text-2xl mr-2"></i>
+                Activities
               </Link>
             </div>
           </div>
 
           {/* Contacts Section */}
-          <div className="lg:text-right">
-            <h4 className="text-lg font-semibold mb-2 underline">Contact Us</h4>
-            <p className="text-sm mb-4">
+          <div className="text-left md:text-right">
+            <h4 className="text-xl font-semibold mb-4 underline">Contact Us</h4>
+            <p className="text-sm mb-6">
               Have any questions or want to get in touch? Reach out to us!
             </p>
-            <div className="flex justify-start lg:justify-end space-x-6">
+            <div className="flex flex-col md:items-end space-y-4">
               <a
                 href="mailto:c3lf.business@gmail.com"
-                className="text-white hover:text-gray-400"
+                className="flex items-center text-white hover:text-gray-400 transition duration-300"
               >
-                <i className="fas fa-envelope text-xl"></i>
-                <span className="ml-2">Email Us</span>
+                <i className="fas fa-envelope text-2xl mr-2"></i>
+                Email Us
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=100085653040814"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-gray-400"
+                className="flex items-center text-white hover:text-gray-400 transition duration-300"
               >
-                <i className="fab fa-facebook text-xl"></i>
-                <span className="ml-2">Facebook</span>
+                <i className="fab fa-facebook text-2xl mr-2"></i>
+                Facebook
               </a>
               <a
                 href="https://github.com/KelySaina/c3lf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-gray-400"
+                className="flex items-center text-white hover:text-gray-400 transition duration-300"
               >
-                <i className="fab fa-github text-xl"></i>
-                <span className="ml-2">GitHub</span>
+                <i className="fab fa-github text-2xl mr-2"></i>
+                GitHub
               </a>
             </div>
           </div>
+        </div>
+
+        <div className="mt-10 text-center text-sm text-gray-500">
+          © {new Date().getFullYear()} C3LF. All rights reserved.
         </div>
       </div>
     </footer>
