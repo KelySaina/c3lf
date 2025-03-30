@@ -23,41 +23,66 @@ const aboutContent = [
 
 const AboutPage = () => {
   return (
-    <div>
-      <div className="bg-gray-50">
-        {/* Introduction Section */}
-        <section className="py-20 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl font-extrabold text-white mb-6">
-              About Us
-            </h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              We are a passionate team of students, developers, and innovators
-              committed to promoting open-source technologies for learning,
-              teaching, and professional development. We believe in the power of
-              knowledge-sharing and community collaboration to drive positive
-              change.
-            </p>
+    <div className="bg-gray-50">
+      {/* Introduction Section */}
+      <section className="relative py-20 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+        <div className="absolute inset-0 bg-opacity-30 bg-gradient-to-b from-transparent to-cyan pointer-events-none"></div>
+        <div className="container mx-auto text-center relative z-10">
+          <h1 className="text-5xl font-extrabold text-white mb-6 animate-fade-in">
+            About Us
+          </h1>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            We are a passionate team of students, developers, and innovators
+            committed to promoting open-source technologies for learning,
+            teaching, and professional development. We believe in the power of
+            knowledge-sharing and community collaboration to drive positive
+            change.
+          </p>
+          <div className="mt-8">
+            <a
+              href="#about-content"
+              className="inline-block px-8 py-3 text-lg font-semibold text-blue-700 bg-white rounded-lg shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105"
+            >
+              Learn More
+            </a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Mapping Through Informational Sections */}
+      {/* Informational Sections */}
+      <div id="about-content" className="container mx-auto py-16 px-6 space-y-16">
         {aboutContent.map((section, index) => (
-          <TextImageComponent
+          <div
             key={index}
-            img={section.img}
-            title={section.title}
-            desc={section.desc}
-            imgpos={section.imgpos}
-          />
+            className={`flex flex-col ${section.imgpos === "l" ? "lg:flex-row" : "lg:flex-row-reverse"
+              } items-center gap-8 transition-transform transform hover:scale-105 duration-300`}
+          >
+            <div className="flex-1">
+              <img
+                src={section.img}
+                alt={section.title}
+                className="rounded-lg shadow-lg w-full max-w-sm"
+              />
+            </div>
+            <div className="flex-1 text-center lg:text-left">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                {section.title}
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                {section.desc}
+              </p>
+            </div>
+          </div>
         ))}
       </div>
-      <div className="text-center p-6">
+
+      {/* Call to Action Section */}
+      <div className="text-center py-12 bg-gradient-to-r from-purple-600 to-blue-500">
         <a
           href="https://github.com/KelySaina/c3lf/blob/main/README.md"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-center px-12 py-4 text-md font-semibold text-white bg-blue-700 hover:bg-blue-800 rounded-lg"
+          className="inline-block px-12 py-4 text-lg font-semibold text-white bg-blue-700 hover:bg-blue-800 rounded-lg shadow-lg transform transition-transform hover:scale-110"
         >
           I want to CONTRIBUTE
         </a>
